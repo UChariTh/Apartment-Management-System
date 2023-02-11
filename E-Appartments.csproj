@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4523AD39-AB6A-4B8E-A8B6-C7AE5C40873B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>E_Appartments</RootNamespace>
+    <AssemblyName>E-Appartments</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Admin\AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Admin\AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Admin\AdminReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Admin\AdminReports.Designer.cs">
+      <DependentUpon>AdminReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Admin\Lease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Admin\Lease.Designer.cs">
+      <DependentUpon>Lease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Admin\LeaseExtendAccept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Admin\LeaseExtendAccept.Designer.cs">
+      <DependentUpon>LeaseExtendAccept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Admin\LeaseMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Admin\LeaseMenu.Designer.cs">
+      <DependentUpon>LeaseMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Admin\ManageApartments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Admin\ManageApartments.Designer.cs">
+      <DependentUpon>ManageApartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Admin\AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Admin\AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Admin\ManageTenants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Admin\ManageTenants.Designer.cs">
+      <DependentUpon>ManageTenants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Customer\AddLeaseRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Customer\AddLeaseRequest.Designer.cs">
+      <DependentUpon>AddLeaseRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Customer\Apartments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Customer\Apartments.Designer.cs">
+      <DependentUpon>Apartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Customer\ChiefOccupantSignup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Customer\ChiefOccupantSignup.Designer.cs">
+      <DependentUpon>ChiefOccupantSignup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Customer\CustomerLease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Customer\CustomerLease.Designer.cs">
+      <DependentUpon>CustomerLease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Customer\CustomerLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Customer\CustomerLogin.Designer.cs">
+      <DependentUpon>CustomerLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Customer\CustomerRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\Customer\CustomerRegistration.Designer.cs">
+      <DependentUpon>CustomerRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ApartmentDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApartmentDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ApartmentDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ApartmentDetailsForm.Designer.cs">
+      <DependentUpon>ApartmentDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ChiefOccupantDetail.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChiefOccupantDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerDetail.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerDetailsForm.Designer.cs">
+      <DependentUpon>CustomerDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LeaseDetail.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeaseDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LeaseDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\LeaseDetailsForm.Designer.cs">
+      <DependentUpon>LeaseDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OccupantDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\OccupantDetailsForm.Designer.cs">
+      <DependentUpon>OccupantDetailsForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controller\Admin\AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Admin\AdminReports.resx">
+      <DependentUpon>AdminReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Admin\Lease.resx">
+      <DependentUpon>Lease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Admin\LeaseExtendAccept.resx">
+      <DependentUpon>LeaseExtendAccept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Admin\LeaseMenu.resx">
+      <DependentUpon>LeaseMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Admin\ManageApartments.resx">
+      <DependentUpon>ManageApartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Admin\AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Admin\ManageTenants.resx">
+      <DependentUpon>ManageTenants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Customer\AddLeaseRequest.resx">
+      <DependentUpon>AddLeaseRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Customer\Apartments.resx">
+      <DependentUpon>Apartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Customer\ChiefOccupantSignup.resx">
+      <DependentUpon>ChiefOccupantSignup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Customer\CustomerLease.resx">
+      <DependentUpon>CustomerLease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Customer\CustomerLogin.resx">
+      <DependentUpon>CustomerLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Customer\CustomerRegistration.resx">
+      <DependentUpon>CustomerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\ApartmentDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ApartmentDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ApartmentDetailsForm.resx">
+      <DependentUpon>ApartmentDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ChiefOccupantDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ChiefOccupantDetail.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerDetail.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerDetailsForm.resx">
+      <DependentUpon>CustomerDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LeaseDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LeaseDetail.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LeaseDetailsForm.resx">
+      <DependentUpon>LeaseDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OccupantDetailsForm.resx">
+      <DependentUpon>OccupantDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="View\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\54623.png" />
+    <None Include="Images\288744.png" />
+    <None Include="Images\149071.png" />
+    <None Include="Images\Apartment-icon.png" />
+    <None Include="Images\5331917-middle.png" />
+    <None Include="Images\2558032.png" />
+    <None Include="Images\1275212.png" />
+    <None Include="Images\585e4beacb11b227491c3399.png" />
+    <Content Include="Images\APARTMENTS.png" />
+    <Content Include="Images\BusinessLogo.png" />
+    <None Include="Images\download.png" />
+    <Content Include="Images\Logo.png" />
+    <None Include="Images\Screenshot 2023-01-17 233127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
